@@ -1,6 +1,9 @@
 const customers = require('../../lib/customers');
+const { logEvent } = require('../../lib/log');
 
 const handler = async (event) => {
+  logEvent(event);
+
   const { body } = event;
   const { id, name, address } = JSON.parse(body);
 
