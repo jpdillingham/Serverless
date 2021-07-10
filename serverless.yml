@@ -15,13 +15,13 @@ provider:
     restApi: true
 
 functions:
-  customers.get:
+  customers_get:
     handler: src/handlers/customers/get.handler
     events:
       - http:
           path: /customers
           method: GET
-  customers.getById:
+  customers_getById:
     handler: src/handlers/customers/getById.handler
     events:
       - http:
@@ -31,13 +31,13 @@ functions:
             parameters:
               paths:
                 id: true
-  customers.create:
+  customers_create:
     handler: src/handlers/customers/create.handler
     events:
       - http:
           path: /customers
           method: POST
-  customers.delete:
+  customers_delete:
     handler: src/handlers/customers/delete.handler
     events:
       - http:
